@@ -89,7 +89,7 @@
                         $the_query->the_post();
                         ?>
                         <div class="bloc-artiste cell small-12 medium-6 large-6 ">
-                            <a href="<?php get_permalink(); ?>" class="artiste">
+                            <a href="<?php echo get_home_url()?>/line-up" class="artiste">
                                 <div class="artiste__box bloc-image-zoom ">
                                     <img class="image-zoom" src="<?php the_post_thumbnail_url('artiste-accueil'); ?>"/>
                                     <h4 class="artiste__nom"><?php the_title(); ?></h4>

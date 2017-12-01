@@ -3,6 +3,7 @@
 *
 !.gitignore
 !wp-content
+!bdd.sql
 
 
 # Ignore le contenu de "wp-content" sauf "plugins", "themes" et "mu-plugins"

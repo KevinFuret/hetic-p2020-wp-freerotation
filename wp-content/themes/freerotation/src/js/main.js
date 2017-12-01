@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
 
 function serviceWorker() {
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('https://freerotation.ovh/sw.js').then(function(reg) {
+        navigator.serviceWorker.register('https://freerotation.kevinfuret.fr/wp-content/themes/freerotation/sw.js').then(function(reg) {
 
             if(reg.installing) {
                 console.log('Service worker installing');

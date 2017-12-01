@@ -1,3 +1,9 @@
+.home .actu , .blog .actu {
+  &__image {
+  margin-bottom: 0;
+  }
+}
+
 .actu{
   padding: 0rem 0.5rem;
   margin-bottom: 1rem;
@@ -14,6 +20,11 @@
     overflow: hidden;
     border:$grey 1px solid;
     border-bottom: hidden;
+    margin-bottom: 0.5rem;
+    img {
+      width: 100%;
+      height: auto;
+    }
     span {
       position: absolute;
       color: $aqua;

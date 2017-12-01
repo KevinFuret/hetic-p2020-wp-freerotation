@@ -1,0 +1,91 @@
+.bloc-artiste {
+  @media screen and (min-width: 640px) {
+   padding: 0rem 0.5rem;
+  }
+}
+
+
+.artiste {
+  padding: 1rem;
+  &__box {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.42);
+    height: 10rem;
+  }
+
+  &__box img{
+    box-shadow: 10px 5px 20px 0px rgba(0,0,0,0.1);
+
+  }
+  &__box img :after{
+    content: '';
+    position: absolute;
+    display: flex;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(4,12,21,0.4) 76%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    opacity: 0.5;
+  }
+  &__nom{
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 38px;
+    color: white;
+    width: auto;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  &__date {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: $aqua;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 1rem;
+  }
+  &__bio {
+    color: $dark-grey-text;
+    letter-spacing: 1px;
+    line-height: 130%;
+  }
+  &__close {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  &__playlist {
+    margin-top: 0.5rem;
+  }
+}
+
+.parent-content-ajax {
+  display: none;
+  margin: 1rem 0rem;
+}
+
+.content_ajax {
+  margin: 0rem 0.5rem;
+}
+
+.artistes {
+  margin:0rem 1rem;
+}
+
+.liste-artistes {
+  padding-left: 4rem;
+  h4 {
+    font-size: 20px;
+    color: $dark-grey-text;
+    margin: 0.8rem 0rem;
+    transition: 0.05s all ease-in-out;
+    &:hover {
+      color: $aqua;
+    }
+  }
+}

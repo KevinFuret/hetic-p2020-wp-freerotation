@@ -1,0 +1,40 @@
+.actu{
+  padding: 0rem 0.5rem;
+  margin-bottom: 1rem;
+  transition: 0.2s ease-in-out;
+  &:hover .button_link_right{
+     background-color: $aqua;
+     color: white;
+   }
+  &:hover .arrow-grey{
+    color: white;
+  }
+  &__image {
+    position: relative;
+    overflow: hidden;
+    border:$grey 1px solid;
+    border-bottom: hidden;
+    span {
+      position: absolute;
+      color: $aqua;
+      text-transform: uppercase;
+      bottom: 0;
+      right: 0;
+      background-color: white;
+      padding: 1rem;
+    }
+  }
+  &__description {
+    border:$grey 1px solid;
+    border-top: hidden;
+    padding: 0.5rem;
+    &__date {
+      color: $grey-text;
+
+    }
+    &__extrait {
+      color: $grey-text;
+      margin: 1rem;
+    }
+  }
+}

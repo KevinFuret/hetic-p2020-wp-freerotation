@@ -1,0 +1,44 @@
+{
+    "key": "group_5a08cd075c554",
+    "title": "Réglages Playlist",
+    "fields": [
+        {
+            "key": "field_5a08cd23d8233",
+            "label": "playlist spotify",
+            "name": "playlist_spotify",
+            "type": "text",
+            "value": null,
+            "instructions": "Veuillez remplacer le code pour changer de playlist",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "3rgsDhGHZxZ9sB9DQWQfuf",
+            "placeholder": "",
+            "prepend": "https:\/\/open.spotify.com\/embed?uri=spotify:user:spotify:playlist:",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "93"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1512094048
+}

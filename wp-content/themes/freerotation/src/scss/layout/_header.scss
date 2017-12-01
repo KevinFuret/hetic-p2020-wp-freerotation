@@ -1,0 +1,298 @@
+header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    li.current-menu-item {
+        a{
+            position: relative;
+            &:after{
+                display: block;
+                content: '';
+                width: 60px;
+                height: 3px;
+                background: $aqua;
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            //TODO Revoir ce code
+        }
+    }
+    h1 {
+        background-color: transparent;
+    }
+
+    .date {
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .logo {
+        padding-top: 5rem;
+        z-index: 1;
+        //margin-top: 3rem;
+        text-align: center;
+        width: 85%;
+        img {
+            width: 400px;
+        }
+        @media screen and (min-width: 769px) {
+            padding-top: 0rem;
+            width: 100%;
+        }
+
+    }
+    &:before {
+        content: "";
+        display: block;
+
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        display: flex;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(4,12,21,0.4) 76%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        opacity: 0.5;
+    }
+}
+
+
+// --- Main Navigation ---
+
+// Namespace (treat as a component)
+$ns: '.nav';
+$nst: '.navtop';
+
+#{$nst} {
+    z-index: 10;
+    width: 100%;
+    height: 30px;
+    opacity: 0;
+    @media screen and (min-width: 769px) {
+        opacity: 1;
+    }
+    &__container {
+        padding: 0 15px;
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            a {
+                display: block;
+                padding: 15px 0;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                letter-spacing: 1px;
+                @media screen and (min-width: 769px) {
+                    padding: 0 10px;
+                    transition: color 150ms ease-out;
+
+                    &:hover {
+                        color: $aqua;
+                    }
+                }
+                @media screen and (min-width: 900px) {
+                    padding: 0 20px;
+                    transition: color 150ms ease-out;
+
+                    &:hover {
+                        color: $aqua;
+                    }
+                }
+            }
+
+            @media screen and (min-width: 769px) {
+
+            }
+        }
+    }
+}
+
+.menu-ouvert {
+
+    @media screen and (max-width: 768px) {
+
+        // Fade in navigation list
+        .menu_header {
+            height: 100vh !important;
+            opacity: 1 !important;
+            transition: opacity 300ms ease-out !important;
+        }
+
+        // Animate burger
+        #{$ns}__burger {
+            &:before {
+                transform: translate3d(0, 6px, 0) rotate(-45deg);
+            }
+
+            &:after {
+                transform: translate3d(0, -6px, 0) rotate(45deg);
+            }
+        }
+    }
+}
+
+
+// Component styles
+#{$ns} {
+
+    $nav-height: 60px;
+
+    // Nav
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: $nav-height;
+    background-color: $black;
+    z-index: 1000;
+    @media screen and (min-width: 769px) {
+        top:-62px;
+        transition: 0.2s ease-in-out;
+
+    }
+
+    // Nav Open Modifier state
+
+
+
+
+    // Nav Container
+    &__container {
+        padding: 0 15px;
+
+        @media screen and (min-width: 769px) {
+            display: flex;
+            justify-content: flex-end;
+            margin: 0 auto;
+            height: 100%;
+        }
+    }
+
+    // Nav Title
+    &__title {
+        float: left;
+        margin: 0;
+        height: $nav-height;
+
+        @media screen and (min-width: 769px) {
+            flex: 1;
+            align-self: flex-start;
+            float: none;
+            height: 100%;
+        }
+    }
+
+    // Nav Title Link
+    &__title-link {
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+        height: 100%;
+        width: 150px;
+        img {
+
+        }
+    }
+
+    // Nav List
+    .menu-header-container ul {
+        position: absolute;
+        left: 0;
+        top: $nav-height;
+        width: 100%;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        background-color: $black;
+        list-style: none;
+        opacity: 0;
+        overflow: hidden;
+        transition: opacity 300ms ease-out,
+        height 0ms linear 300ms;
+        @media screen and (min-width: 769px) {
+            display: flex;
+            position: static;
+            width: auto;
+            height: auto;
+            background-color: transparent;
+            opacity: 1;
+        }
+        li {
+            padding-top: 1rem;
+            @media screen and (min-width: 769px) {
+                display: flex;
+                align-items: center;
+                height: $nav-height;
+                padding-top: 0rem;
+            }
+        }
+        a {
+            display: block;
+            padding: 15px 0;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-size: 24px;
+            @media screen and (min-width: 769px) {
+                padding: 0 10px;
+                transition: color 150ms ease-out;
+                font-size: 16px;
+                &:hover {
+                    color: $aqua;
+                }
+            }
+            @media screen and (min-width: 900px) {
+                padding: 0 20px;
+                transition: color 150ms ease-out;
+
+                &:hover {
+                    color: $aqua;
+                }
+            }
+        }
+    }
+
+
+    // Nav Burger
+    &__burger {
+        float: right;
+        position: relative;
+        width: $nav-height;
+        height: $nav-height;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            left: 10px;
+            width: 40px;
+            height: 4px;
+            background-color: white;
+            transform-origin: 50% 50%;
+            transition: transform 275ms ease;
+        }
+
+        &:before {
+            top: 22px;
+        }
+
+        &:after {
+            top: 34px;
+        }
+        @media screen and (min-width: 769px) {
+            display: none;
+        }
+    }
+}
+// Mettre un trait bleu sous la page du menu active

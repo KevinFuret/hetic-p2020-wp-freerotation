@@ -1,0 +1,110 @@
+footer {
+  background-color: white;
+  padding-top: 2rem;
+}
+
+.footer {
+  align-items: center;
+  .menu-menu-footer-container{
+    text-align: center;
+    li {
+      padding-bottom: 0.5rem;
+    }
+    // enlever le trait bleu
+    li.current-menu-item {
+      a{
+        position: relative;
+        &:after{
+          display: none;
+          content: '';
+          width: 60px;
+          height: 3px;
+          background: $aqua;
+          position: absolute;
+          bottom: -5px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        //TODO Revoir ce code
+      }
+    }
+    padding-bottom: 1rem;
+  }
+  &__rs {
+    height:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (min-width: 769px) {
+      justify-content: flex-start;
+      padding-left: 3rem;
+    }
+  }
+  &__unrs {
+    padding: 0px 10px;
+    img {
+      height: 30px;
+      @media screen and (min-width: 769px) {
+        height: 20px;
+      }
+    }
+  }
+  &__plan {
+    column-count: 1;
+    @media screen and (min-width: 769px) {
+      column-count: 2;
+    }
+    a {
+      color: $grey-text;
+      text-align: center;
+      font-size: 18px;
+      @media screen and (min-width: 769px) {
+        text-align: left;
+      }
+      &:hover {
+        color: $aqua;
+      }
+    }
+  }
+  &__unplan {
+    margin-bottom: 10px;
+  }
+  &__partenaires {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    @media screen and (min-width: 769px) {
+      display: inline-block;
+      padding-right: 3rem;
+      margin-top: 0rem;
+
+    }
+
+  }
+  &__groupepartenaire {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @media screen and (min-width: 769px) {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__unpartenaire {
+    padding: 0px 10px;
+    a img {
+      width: 40px;
+    }
+  }
+}
+
+.subfooter {
+  text-align: center;
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+  p {
+    font-size: 13px;
+    color: $grey-text;
+  }
+}

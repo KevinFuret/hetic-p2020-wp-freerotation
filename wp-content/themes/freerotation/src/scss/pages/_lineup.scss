@@ -1,0 +1,52 @@
+.filters {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media screen and (min-width: 769px) {
+
+  }
+  &__button {
+    order: 0;
+    margin-right: 0rem;
+    width: 100%;
+    text-align: center;
+    @media screen and (min-width: 769px) {
+      order: 1;
+      width: auto;
+      margin-right: 2rem;
+    }
+  }
+  &__jours {
+    margin: 0 auto;
+    text-align: center;
+    @media screen and (min-width: 769px) {
+      order: 0;
+      width: auto;
+      margin: 0 0 0 2rem;
+      text-align: left;
+    }
+  }
+  &__taxo {
+    margin-left: 1rem;
+    list-style: disc;
+    color: $grey-text;
+    li {
+      margin-bottom: 0.5rem;
+      a {
+        color: $grey-text;
+      }
+    }
+
+
+  }
+}
+
+.ajax-filters {
+  display: none;
+}
+
+.bloc-artistes-et-filtres {
+  @media screen and (min-width: 1024px) {
+    margin-top: -65px;
+  }
+}

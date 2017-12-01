@@ -1,0 +1,112 @@
+body {
+  background-color: $grey;
+}
+
+body:not(.home) #content {
+  background-color: white;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  @media screen and (min-width: 769px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.h1 {
+  margin-top: 1rem;
+}
+
+.actus h2 {
+    margin: 1rem 0.5rem;
+}
+
+.cell {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.center-link {
+  margin: auto;
+  text-align: center;
+}
+
+.section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  @media screen and (min-width: 769px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+#content .cell {
+  background-color: white;
+}
+
+.absolute-centered-text {
+  position: absolute;
+  width: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.bloc-image-zoom {
+  overflow: hidden;
+  position: relative;
+
+    &:hover .image-zoom {
+      transform: scale(1.2);
+    }
+  .image-zoom {
+    min-width: 100%;
+    min-height: 100%;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    filter: brightness(50%);
+    object-fit: cover;
+  }
+}
+
+.colored-text {
+  color: $aqua;
+}
+
+p, li {
+  color: $grey-text;
+}
+a:visited {
+  color: $grey-text;
+}
+
+.page-404 .cell {
+  margin: 2rem 0rem;
+  text-align: center;
+  h2 {
+    text-align: center;
+  }
+     }
+
+.cell li:not(.accordion-item) {
+  display: flex;
+  &:before {
+    content: url("../../dist/img/puce.png");
+    padding-right: 1rem;
+  }
+}
+
+.grid-margin-x {
+  @media screen and (max-width: 769px) {
+    margin: 1rem 0;
+  }
+}
+
+.page-id-95 .section, .page-id-91 .section {
+  padding: 1rem;
+}

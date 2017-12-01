@@ -1,0 +1,80 @@
+{
+    "key": "group_5a119950af196",
+    "title": "Artiste",
+    "fields": [
+        {
+            "key": "field_5a119a74fbd50",
+            "label": "Date et heure de passage",
+            "name": "date_et_heure_de_passage",
+            "type": "date_time_picker",
+            "value": null,
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y H:i",
+            "return_format": "l d M H:i",
+            "first_day": 1
+        },
+        {
+            "key": "field_5a13a5b8c550a",
+            "label": "Date et heure de fin",
+            "name": "date_et_heure_de_fin",
+            "type": "date_time_picker",
+            "value": null,
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y H:i",
+            "return_format": "H:i",
+            "first_day": 1
+        },
+        {
+            "key": "field_5a119b0cfbd51",
+            "label": "Mix Soundcloud",
+            "name": "mix_soundcloud",
+            "type": "text",
+            "value": null,
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "artiste"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1511237064
+}

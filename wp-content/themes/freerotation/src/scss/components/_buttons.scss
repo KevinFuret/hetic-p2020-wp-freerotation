@@ -1,0 +1,85 @@
+.button_link_right {
+  display: inline-block;
+  border: solid 1px $aqua;
+  transition: 0.2s ease-in-out;
+  margin: 1rem 0rem;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: #909090;
+  position: relative;
+  &:hover {
+    background-color: $aqua;
+    color: white;
+  }
+  &:hover .arrow-grey {
+    transition: 0.2s ease-in-out;
+    color: white;
+  }
+  &:hover .arrow-grey-reverse {
+    transition: 0.2s ease-in-out;
+    color: white;
+  }
+  &:hover .arrow-white-reverse {
+     transition: 0.2s ease-in-out;
+     color: $grey;
+   }
+  &:hover .arrow-white {
+    transition: 0.2s ease-in-out;
+    color: $grey;
+  }
+}
+
+.arrow-white {
+  content: '&#xf178;';
+  font-family: 'fontello';
+  font-size: 1rem;
+  color: white;
+}
+
+.arrow-grey{
+  content: '&#xf178;';
+  font-family: 'fontello';
+  font-size: 1rem;
+  color: $grey-text;
+}
+
+.arrow-white-reverse {
+  content: '&#xf177;';
+  font-family: 'fontello';
+  font-size: 1rem;
+  color: white;
+}
+
+.arrow-grey-reverse {
+  content: '&#xf177;';
+  font-family: 'fontello';
+  font-size: 1rem;
+  color: $grey-text;
+}
+
+.filter {
+  content: '&#xf0b0;';
+  font-family: 'fontello';
+  font-size: 1rem;
+  color: $grey-text;
+}
+
+input[type=submit] {
+  background-color: white !important;
+  border-color: $aqua;
+  margin: 1rem 0rem;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #909090;
+  cursor: pointer;
+  &:hover {
+    background-color: $aqua !important;
+    color: white;
+  }
+}

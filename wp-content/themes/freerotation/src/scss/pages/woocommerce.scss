@@ -1,0 +1,25 @@
+.woocommerce {
+  ul.products {
+    margin: 2rem;
+    .product:first-child {
+      margin-left : 0rem !important;
+      margin-right: 1rem !important;
+    }
+    .product {
+      margin-left : 2rem !important;
+      margin-right: 1rem !important;
+    }
+  }
+  .checkout-button {
+    background-color: $aqua !important;
+    &:hover {
+      background-color: $dark-aqua !important;
+    }
+  }
+  #place_order {
+    background-color: $aqua !important;
+    &:hover {
+      background-color: $dark-aqua !important;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.timetable {
+  .filters {
+    @media screen and (min-width: 769px) {
+      justify-content: flex-end;
+    }
+    .filters__button {
+      @media screen and (min-width: 769px) {
+        margin-top: -40px;
+      }
+
+    }
+  }
+  &__jour {
+    margin-bottom: 2rem;
+    padding: 0rem 1rem;
+  }
+  &__débutdate {
+    position: absolute;
+    top:0;
+    left: 0;
+    margin: 0.5rem;
+  }
+  &__findate {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0.5rem;
+  }
+  table {
+    tr {
+      &:last-child td:after {
+        width: 0%;
+      }
+    }
+    td {
+      &:hover {
+        background-position: center center !important; // make it visible
+        color: white;
+        h4 {
+          color: white;
+        }
+      }
+      background-color: white !important;
+      height: 5rem;
+      color: $grey-text;
+      position: relative;
+      border: none;
+      &:after {
+        content:"";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        border-top: 2px solid $aqua;
+        z-index: 10;
+        width: 20%;
+        margin: 0 auto;
+      }
+      h4 {
+        color: $dark-grey-text;
+        font-size: 25px;
+        font-weight: 700;
+      }
+    }
+  }
+  &__groupejour {
+    margin: 1rem auto;
+    position: relative;
+  }
+  &__nomjour {
+    position: relative;
+    color: $aqua;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 30px;
+    z-index: 10;
+  }
+  &__numérojour {
+    color: $grey;
+    font-weight: 900;
+    font-size: 120px;
+    margin-left: -40px;
+  }
+}
+
